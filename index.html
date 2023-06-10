@@ -1,62 +1,177 @@
 <!DOCTYPE html>
-<!-- saved from url=(0067)https://in2-1316242732.cos.ap-nanjing.myqcloud.com/QRC-in-long.html -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
-	<meta http-equiv="expires" content="0">
-	<title>正在跳转...</title>
-
-</head>
-
-<body>
-
-	<div onclick="myAlert()" style="width: 600px;height: 50px;background-color: red;text-align: center;line-height: 50px;border-radius:25px;font-size: 20px;font-weight:bold;color: yellow;margin: auto;margin-top: 20%;">
-		长时间无法进入,请点击进入</div>
-
-	<script type="text/javascript" src="./»»»正在缓冲，请稍等,无妨访问会修复_files/jquery-3.5.1.min.js.下载"></script>
-
-	<script type="text/javascript">
-		function GetQueryString(name){
-var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-// var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-var r = window.location.search.substr(1).match(reg);
-if(r!=null)return  unescape(r[2]); return null;
-}
-
-
-bucket  = GetQueryString("bucket");
-sign    = GetQueryString("sign");
-
-var jumpurl = "http://www.jsons.cn/urlencode";
-var searchURL = window.location.search;
-console.log(searchURL); 
-searchURL = searchURL.substring(1, searchURL.length); 
-window.location.href= jumpurl
-
-
-// var baseUrl = "";
-// $.ajax({
-//  url: baseUrl + '?bucket='+ bucket + '&sign=' + sign,
-//  type: 'GET',
-//  success: function(response) {
-//     var response = JSON.parse(response);
-//    if (response.code === 200) {
-//          window.location.replace(response.body);
-//    } else {
-//         alert(response.message);
-//    }
-//  },
-//    error: function(response) {
+<!-- saved from url=(0072)https://i.carnoc.com/prompt/prompt-jump/?url=https://pc.meitu.com/design -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-//          window.location.replace('https://m.jd.com/');
-//      }
-//   })
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳转原文页面</title>
+    <style>
+        html, body{
+            height: 100%;
+        }
+        body{
+            max-width: 640px;
+            margin:  0 auto;
+            padding: 0 20px; 
+            overflow: hidden;
+        }
+        .page{
+            position: relative;
+            height: 100%;
+        }
+        .wrap{
+            position: absolute;
+            top: 25%;
+            width: 100%;
+        }
+        .logo {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .logo img{
+            width: 120px;
+        }
+        .prompt-box{
+            border:2px solid #bababa;
+        }
+        .prompt-content{
+            padding: 10px;
+            /* text-align: center; */
+        }
+        .page .prompt-content .link{
+            display: inline-block;
+            padding: 20px 0;
+            word-break: break-all;
+            font-size: 16px;
+            cursor: pointer;
+            color: #333;
+            text-decoration: none;
+        }
+        .page .tl{
+            font-size: 18px;
+            color: #0f4275;
+            font-weight: 700;
+            margin:0;
+        }
+        .page .prompt-footer{
+            /* text-align: center; */
+            background: #f1f1f1;
+            padding: 10px;
+        }
+        .prompt-footer .link{
+            background: #3e7fbf;
+            color: #fff;
+            font-size: 14px;
+            padding: 8px 17px;
+            display: inline-block;
+            border-radius: 5px;
+            text-decoration: none;
+            border:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="wrap" id="wrap">
+            <a class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKwAAAAeCAYAAAHGNMUwAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkE2QTlCRjU3RDY5NDExRThBODk0RjVENjhCNjBFNTcxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkE2QTlCRjU4RDY5NDExRThBODk0RjVENjhCNjBFNTcxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTZBOUJGNTVENjk0MTFFOEE4OTRGNUQ2OEI2MEU1NzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTZBOUJGNTZENjk0MTFFOEE4OTRGNUQ2OEI2MEU1NzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6oMCU9AAAM7klEQVR42mL8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"></a>
+            <div class="prompt-box">
+                <div class="prompt-content">
+                    <p class="tl">正在跳转原文链接:</p>
+                    <span class="link" id="link_1" onclick="skipUrl()">https://pc.meitu.com/design</span>
+                </div>
+                <div class="prompt-footer">
+                    <button class="link" onclick="skipUrl()">立即访问</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script>
+        /**
+         * @title  简单判断是否是连接地址
+         * @author lvzhengyu
+         * @since  2020-05-19.
+         */
+        function escapeHtml(value) {
+            // console.log(value);
+            if (typeof value !== 'string') {
+                return value
+            }
 
-  function myAlert(){
-      location.reload();
-  }
+
+            var reg = /^(http|https):\/\//;
+            // console.log(reg.test(value))
+
+        
+            //判断链接是否是http|https
+            if(!reg.test(value)){
+                return "https://www.insarea.com/"
+            }else{
+                return value;
+                // return value.replace(/[&<>`"'\/]/g, function(result) {
+                //     return {
+                //         '&': '&amp;',
+                //         '<': '&lt;',
+                //         '>': '&gt;',
+                //         '`': '&#x60;',
+                //         '"': '&quot;',
+                //         "'": '&#x27;',
+                //         '/': '&#x2f;',
+                //     }[result]
+                // });
+            }
+        }
+        
+        /**
+         * @title  获取地址栏参数
+         * @author lvzhengyu
+         * @since  2020-05-19.
+         */
+        function getQueryFromURL() {
+            var url = location.search;
+            var tmp = url.split('?');
+            var query = (tmp[1] || "").split('#')[0].split('&');
+            var params = {};
+            for (var i = 0; i < query.length; i++) {
+                var arg = query[i].split('=');
+                if (arg.length > 1) {
+                    params[arg[0]] = escapeHtml(unescape(arg[1]));
+                }
+            }
+            return params;
+        }
+
+    
+        var params = getQueryFromURL(), 
+            url='https://www.insarea.com/',
+            link_1 = document.getElementById('link_1');
 
 
- 
-	</script></body></html>
+            // console.log('params', params);
+        //判断地址栏url是否存在
+        if(params.url){
+            url = params.url
+        }
+
+        // console.log(url)
+
+        //页面地址赋值
+        link_1.innerText = url;
+
+        //点击跳转
+        function skipUrl(){
+            try{
+                // console.log('err')
+                location.href = url
+            } catch(err){
+                // console.log(err)
+                location.href = 'https://www.insarea.com/'
+            }
+        }
+
+        //1.5秒后跳转
+        setTimeout(function(){
+            skipUrl()
+        },2000)
+
+    </script>
+
+</body></html>
